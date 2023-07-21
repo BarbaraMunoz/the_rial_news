@@ -1,0 +1,27 @@
+<h1>Therial News</h1>
+
+<% @news.each do |news| %>
+    <div>
+        <h2><%= news.title %></h2>
+        <p><%= news.content %></p>
+
+        <% if user_signed_in? %>
+        <%= form_for(Comment.new) do |f| %>
+            <%= f.hidden_field :user_id, value: current_user.id %>
+            <%= f.hidden_field :news_id, value: news.id %>
+            <%= f.text_area :content, placeholder: "Deja tu comentario..." %>
+            <%= f.submit "Comentar" %>
+        <% end %>
+        <% else %>
+        <p>Inicia sesión para dejar un comentario.</p>
+        <% end %>
+
+        <% news.comments.each do |comment| %>
+        <div>
+            <strong><%= comment.user.email %></strong>
+            <p><%= comment.content %></p>
+        </div>
+        <% end %>
+    </div>
+<% end %>
+

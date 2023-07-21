@@ -1,0 +1,58 @@
+<!--NAVBAR--->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">The Rial News</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/news">Noticias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Contacto</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <% if user_signed_in? %>
+          <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 font-weight-bold">Bienvenido <%= current_user.name%></a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<%= root_path %>">Nosotros</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="usuariosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Panel</a>
+            <ul class="dropdown-menu" aria-labelledby="usuariosDropdown">
+              <li><a class="dropdown-item" href="<%= news_index_path %>">Publicaciones</a></li>
+        
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" id="usuariosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Usuario</a>
+            <ul class="dropdown-menu" aria-labelledby="usuariosDropdown">
+              <li><a class="dropdown-item" href="<%= edit_user_registration_path	%>">Editar Datos</a></li>
+              <li>
+                <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "dropdown-item px-lg-3 py-3 py-lg-4 btn btn-sm btn-link" %>
+              </li>
+            </ul>
+          </li>
+        <%else%>
+          <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 font-weight-bold">Bienvenido</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<%= root_path %>">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 btn btn-outline-success text-white" href="<%= new_user_session_path %>">Iniciar Sesión</a></li>
+        <%end%>
+                    </a>
+                    <ul class="dropdown-menu">
+                    <% if user_signed_in? %>
+                        <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method:
+                    :delete %></li>
+                    <% else %>
+                        <li><%= link_to 'Iniciar sesión',  new_user_session_path, class: 'dropdown-item'%></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><%= link_to 'Registro',  new_user_registration_path, class: 'dropdown-item'%></li>
+                    <% end %>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
