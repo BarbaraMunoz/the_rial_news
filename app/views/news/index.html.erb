@@ -1,14 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>News</h1>
+<h1>Noticias</h1>
+
+<%= link_to "Nueva noticia", new_news_path, class: "btn btn-outline-success btn-margin" %>
 
 <div id="news">
   <% @news.each do |news| %>
     <%= render news %>
     <p>
-      <%= link_to "Show this news", news %>
+      <%= link_to "Ver noticia", news %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New news", new_news_path %>
+

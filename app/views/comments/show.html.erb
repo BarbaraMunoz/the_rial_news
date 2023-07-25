@@ -3,8 +3,8 @@
 <%= render @comment %>
 
 <div>
-  <%= link_to "Edit this comment", edit_comment_path(@comment) %> |
-  <%= link_to "Back to comments", comments_path %>
+  <%= link_to "Editar comentario", edit_comment_path(@comment), class: "btn-margin" %> |
+  <%= link_to "Volver a noticia", news_path, class: "btn-margin" %>
 
-  <%= button_to "Destroy this comment", @comment, method: :delete %>
+  <%= button_to "Eliminar comentario", @comment, method: :delete, class: "btn btn-outline-danger btn-margin" %>
 </div>

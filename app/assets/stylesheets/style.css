@@ -1,0 +1,233 @@
+/*body*/
+body {
+    position: relative; /* Establece la posición como relativa para que los elementos internos no se vean afectados */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/paper.png");
+    opacity: 0.1; /* Ajusta el valor alfa (0.0 - 1.0) para cambiar la transparencia */
+    z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+
+
+/* Alinear los elementos del navbar */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 10px;
+    padding-top: 5px;
+}
+
+  /* Estilos para los enlaces del navbar */
+
+.custom-logo {
+    height: 90px; /* Ajusta la altura deseada para el logo */
+    display: flex; /* Permite que la imagen ocupe todo el espacio verticalmente */
+    align-items: center; /* Centra verticalmente la imagen */
+}
+
+.logo-image {
+    height: 150%; /* Hace que la imagen ocupe todo el espacio verticalmente */
+     /* Permite que el ancho se ajuste automáticamente para mantener la proporción de la imagen */
+}
+
+.bg-nav {
+    background-color: #7D7B7B;
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+  /* Estilos para el botón del dropdown */
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+  /* Estilos para el menú del dropdown */
+.dropdown-menu {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+/*Sección Home*/
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.news-container {
+    margin-bottom: 120px;
+    padding: 40px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+.news-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.news-container p {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+
+/* Sección About*/
+
+.about-section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.section-subheading {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/*Comments Form*/
+
+
+
+.comment, .comment-form {
+    padding: 10px;
+    background-color: rgba(212, 237, 223, 0.8); /* Color base del fondo con transparencia */
+    border: 1px solid #ddd;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    border-color: #7D7B7B;
+    background-image: linear-gradient(to right, rgba(212, 237, 223, 0.8), rgba(203, 224, 242, 0.8)); /* Degradado con transparencia */
+}
+
+
+
+.comment strong {
+    font-weight: bold;
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.comment-form-container {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border: 1px solid #000000;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+/*News Form*/
+
+/* Estilos para el formulario de contenido */
+.news-form-container {
+    max-width: 800px; /* Ajusta el ancho máximo del formulario según tus necesidades */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    padding: 20px; /* Agrega un espaciado interno al formulario para separarlo del borde */
+    background-color: #f9f9f9; /* Color de fondo estético */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra estética */
+}
+
+.news-form-container label {
+    display: block;
+    font-weight: bold;
+}
+
+.news-form-container input[type="text"],
+.news-form-container textarea {
+    width: 100%;
+    padding: 8px; /* Ajusta el padding para reducir la altura del campo de texto */
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+  /* Ajusta el alto del título y el campo de usuario */
+.news-form-container input[type="text"] {
+    height: 20px; /* Ajusta la altura del campo de usuario */
+}
+
+.news-form-container textarea {
+    resize: vertical;
+    height: 200px; /* Ajusta la altura del campo de contenido */
+}
+
+.news-form-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/*botones*/
+.btn-margin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/*espaciado news*/
+.new-space {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-inline: 50px;
+    border: 1px solid #ccc;
+}

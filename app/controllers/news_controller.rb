@@ -25,6 +25,7 @@ class NewsController < ApplicationController
 
   # GET /news/1 or /news/1.json
   def show
+    @news = News.find(params[:id])
   end
 
   # GET /news/new
@@ -77,7 +78,11 @@ class NewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_news
-      @news = News.find(params[:id])
+      @news = News.find_by(id: params[:id])
+      unless @news
+        flash[:alert] = "La noticia no fue encontrada"
+        redirect_to news_index_path
+      end
     end
 
     def authorize_admin
