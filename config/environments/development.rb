@@ -59,6 +59,22 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Recuperar contraseña
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Action Mailer
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: 587,
+  domain: 'yourdomain.com', # Cambiar a tu dominio
+  user_name: 'your_email@gmail.com', # Cambiar al correo desde el que se enviarán los emails
+  password: 'your_password', # Cambiar a la contraseña del correo
+  authentication: 'plain',
+  enable_starttls_auto: true
+}
+
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 

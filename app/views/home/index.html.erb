@@ -25,6 +25,9 @@
             <div class="comment">
             <strong><%= comment.user.name %></strong>
             <p class="pt-4"><%= comment.content %></p>
+            <% if user_signed_in? && current_user.admin? %>
+            <%= link_to 'Eliminar', comment_path(comment), method: :delete, data: { confirm: '¿Estás seguro que deseas eliminar este comentario?' }, class: 'btn btn-danger' %>
+            <% end %>
             </div>
         <% end %>
         </div>

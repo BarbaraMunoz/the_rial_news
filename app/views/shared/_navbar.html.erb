@@ -9,7 +9,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto me-5">
                 <li class="nav-item"><a class="nav-link" href="/">Noticias</a></li>
                 <li class="nav-item"><a class="nav-link" href="<%= about_index_path %>">Nosotros</a></li>
                 <!--Acceso solo del Admin a Panel de Noticias-->
@@ -19,8 +19,9 @@
                 <!--Usuarios ingresados-->
                 <% if user_signed_in? %>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle px-lg-3 py-3 py-lg-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mi Sesión</a>
-                    <ul class="dropdown-menu">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mi Sesión</a>
+                    <ul class="dropdown-menu text-left px-3">
+                    <li><span class="dropdown-item-text"><%= current_user.email %></span></li>
                     <li><a class="dropdown-item" href="<%= edit_user_registration_path	%>">Editar Datos</a></li>
                     <li><%= button_to 'Cerrar sesión', destroy_user_session_path, class: 'dropdown-item', method: :delete %></li>
                     </ul>

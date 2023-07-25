@@ -42,7 +42,11 @@ body::before {
 }
 
 .bg-nav {
-    background-color: #7D7B7B;
+    background-color: #479ece;
+}
+
+.navbar {
+    font-size: 18px; /* Ajusta el valor para cambiar el tamaño de fuente */
 }
 
 .nav-link {
@@ -100,6 +104,7 @@ body::before {
     padding: 40px;
     border: 1px solid #000000;
     border-radius: 20px;
+    background-color: #f1f1f1;
 }
 
 .news-container h2 {
@@ -140,14 +145,15 @@ body::before {
 
 .comment, .comment-form {
     padding: 10px;
-    background-color: rgba(212, 237, 223, 0.8); /* Color base del fondo con transparencia */
-    border: 1px solid #ddd;
+    background-color: #479fceda; /* Nuevo color base del fondo sin transparencia */
+    border: 3px solid #ddd;
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 20px;
     border-color: #7D7B7B;
-    background-image: linear-gradient(to right, rgba(212, 237, 223, 0.8), rgba(203, 224, 242, 0.8)); /* Degradado con transparencia */
+    background-image: linear-gradient(to right, #479fceda, rgba(203, 224, 242, 0.8)); /* Degradado con transparencia, usando #479ece como color inicial */
 }
+
 
 
 
