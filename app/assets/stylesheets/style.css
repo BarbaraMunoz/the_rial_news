@@ -1,6 +1,7 @@
 /*body*/
 body {
     position: relative; /* Establece la posición como relativa para que los elementos internos no se vean afectados */
+    margin-top: 100px;
 }
 
 body::before {
@@ -31,13 +32,13 @@ body::before {
   /* Estilos para los enlaces del navbar */
 
 .custom-logo {
-    height: 90px; /* Ajusta la altura deseada para el logo */
+    height: 70px; /* Ajusta la altura deseada para el logo */
     display: flex; /* Permite que la imagen ocupe todo el espacio verticalmente */
     align-items: center; /* Centra verticalmente la imagen */
 }
 
 .logo-image {
-    height: 150%; /* Hace que la imagen ocupe todo el espacio verticalmente */
+    height: 180%; /* Hace que la imagen ocupe todo el espacio verticalmente */
      /* Permite que el ancho se ajuste automáticamente para mantener la proporción de la imagen */
 }
 
@@ -46,7 +47,7 @@ body::before {
 }
 
 .navbar {
-    font-size: 18px; /* Ajusta el valor para cambiar el tamaño de fuente */
+    font-size: 16px; /* Ajusta el valor para cambiar el tamaño de fuente */
 }
 
 .nav-link {
