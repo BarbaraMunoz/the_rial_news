@@ -3,6 +3,8 @@ require "test_helper"
 class NewsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @news = news(:one)
+    @admin_user = users(:two) # Usuario con rol de administrador
+    sign_in @admin_user # Iniciar sesión con el usuario administrador antes de cada prueba
   end
 
   test "should get index" do
@@ -46,3 +48,4 @@ class NewsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to news_index_url
   end
 end
+

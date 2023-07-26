@@ -78,3 +78,5 @@ gem "bootstrap", "~> 5.2"
 gem "jquery-rails", "~> 4.6"
 
 gem "popper_js", "~> 2.11"
+
+gem "figaro", "~> 1.2"

@@ -3,7 +3,10 @@ require "application_system_test_case"
 class NewsTest < ApplicationSystemTestCase
   setup do
     @news = news(:one)
+    @admin_user = users(:two) # Usuario con rol de administrador
+    sign_in @admin_user # Iniciar sesión con el usuario administrador antes de cada prueba
   end
+  
 
   test "visiting the index" do
     visit news_url

@@ -154,9 +154,6 @@ body::before {
     background-image: linear-gradient(to right, #479fceda, rgba(203, 224, 242, 0.8)); /* Degradado con transparencia, usando #479ece como color inicial */
 }
 
-
-
-
 .comment strong {
     font-weight: bold;
 }
@@ -236,4 +233,11 @@ body::before {
     margin-bottom: 50px;
     padding-inline: 50px;
     border: 1px solid #ccc;
+}
+
+.footer {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 40px;
 }

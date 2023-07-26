@@ -11,3 +11,8 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 end
+
+class ActionDispatch::IntegrationTest # Se incluye para test funcional con news_controller_test
+  include Devise::Test::IntegrationHelpers
+end
+

@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  content: MyText
+  title: Titulo de la noticia 1
+  content: Contenido de la noticia 1
   user: one
 
 two:
-  title: MyString
-  content: MyText
+  title: Titulo de la noticia 2
+  content: Contenido de la noticia 2
   user: two
