@@ -4,5 +4,5 @@
 * Gema devise
 * Gema Figaro
 * Modelos con relaciones
-* Navbar inicial con cambios a aplicar
+* Se realizan pruebas funcionales
 # the_rial_news
