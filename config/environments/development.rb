@@ -65,14 +65,13 @@ Rails.application.configure do
   # Action Mailer
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address: 'smtp.gmail.com',
-  port: 587,
-  domain: 'yourdomain.com', # Cambiar a tu dominio
-  user_name: 'your_email@gmail.com', # Cambiar al correo desde el que se enviarán los emails
-  password: 'your_password', # Cambiar a la contraseña del correo
-  authentication: 'plain',
-  enable_starttls_auto: true
-}
+    :user_name => '54d04ba8c4ae4b',
+    :password => 'cf2afa17747d3b',
+    :address => 'sandbox.smtp.mailtrap.io',
+    :host => 'sandbox.smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
 
 
   # Raises error for missing translations.
